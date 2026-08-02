@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rutinass</title>
+
+    <style>
+        /* IMPORTANTE: El navegador necesita saber que el fondo mide el 100% */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000; /* Fondo negro por si acaso */
+            font-family: sans-serif;
+        }
+
+        .fullscreen-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none; /* Todos ocultos por defecto */
+        }
+
+        /* Si page es target: mostrar */
+        .page:target {
+            display: block;
+        }
+
+        /* REGLA NUEVA: El home se muestra por defecto al principio */
+        #home {
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+
+
+        /* botones */
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px); 
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 10;
+
+            flex-grow: 1; 
+            /* Optional: Prevents buttons from stretching *too* wide if there's only 1 left on a row */
+            min-width: 80px; 
+            text-align: center; /* Keeps the text centered inside the stretching button */
+        }
+
+        .button-container {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            /* Give the container a responsive boundary to fill against */
+            width: calc(100% - 40px); 
+            max-width: 800px; /* Max desktop width before it stops growing */
+            
+            gap: 12px;
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HOME -->
+    <div id="home" class="page">
+
+        <div class="button-container">
+            <a href="#06_30" class="nav-btn"><img src="svgs/icono 0630.svg" alt="06:30"></a>
+            <a href="#06_40" class="nav-btn"><img src="svgs/icono 0640.svg" alt="06:40"></a>
+            <a href="#06_50" class="nav-btn"><img src="svgs/icono 0650.svg" alt="06:50"></a>
+            <a href="#07_00" class="nav-btn"><img src="svgs/icono 0700.svg" alt="07:00"></a>
+            <a href="#07_30" class="nav-btn"><img src="svgs/icono 0730.svg" alt="07:30"></a>
+            <a href="#22_29" class="nav-btn"><img src="svgs/icono 2229.svg" alt="22:29"></a>
+            <a href="#22_30" class="nav-btn"><img src="svgs/icono 2230.svg" alt="22:30"></a>
+            <a href="#22_50" class="nav-btn"><img src="svgs/icono 2250.svg" alt="22:50"></a>
+            <a href="#22_52" class="nav-btn"><img src="svgs/icono 2252.svg" alt="22:52"></a>
+            <a href="#23_05" class="nav-btn"><img src="svgs/icono 2305.svg" alt="23:05"></a>
+            <a href="#23_30" class="nav-btn"><img src="svgs/icono 2330.svg" alt="23:30"></a>
+            <a href="#23_50" class="nav-btn"><img src="svgs/icono 2350.svg" alt="23:50"></a>
+            <a href="#24_00" class="nav-btn"><img src="svgs/icono 2400.svg" alt="24:00"></a>
+        </div>
+
+    </div>
+
+    <div id="06_30" class="page">
+        <img class="fullscreen-bg" src="06_30 desperezarse con linterna.png">
+    </div>
+
+    <div id="06_40" class="page" onclick="window.location.href='https://www.youtube.com/shorts/MIhFkrEHXo4';">
+        <img style="cursor: pointer;" class="fullscreen-bg" src="06_40 estirarse.png">
+    </div>
+
+    <div id="06_50" class="page">
+        <img class="fullscreen-bg" src="06_50 payasitos + push ups 10 min.png">
+    </div>
+
+    <div id="07_00" class="page" onclick="window.location.href='https://www.youtube.com/watch?v=y7u5-YBgmQ4';">
+        <img style="cursor: pointer;" class="fullscreen-bg" src="07_00 meditar 6 min.png">
+    </div>
+
+    <div id="07_30" class="page">
+        <img class="fullscreen-bg" src="07_30 vestirse y salir.png">
+    </div>
+
+    <div id="22_29" class="page">
+        <img class="fullscreen-bg" src="22_29 directo a pieza.png">
+    </div>
+
+    <div id="22_30" class="page" onclick="window.location.href='https://youtu.be/kq9a4G7FBzY?t=162';">
+        <img style="cursor: pointer;" class="fullscreen-bg" src="22_30 ejercicio.png">
+    </div>
+    
+    <div id="22_50" class="page" onclick="window.location.href='https://docs.google.com/document/d/1SnshzV38AnAYKivP6GjD__t-JzOrPilHGYKhE2x9_UY/edit?tab=t.w0cuo8dw4791';">
+        <img style="cursor: pointer;" class="fullscreen-bg" src="22_50 salir ropa sucia.png">
+    </div>
+
+    <div id="22_52" class="page" onclick="window.location.href='https://docs.google.com/document/d/1SnshzV38AnAYKivP6GjD__t-JzOrPilHGYKhE2x9_UY/edit?tab=t.w0cuo8dw4791';"">
+        <img style="cursor: pointer;" class="fullscreen-bg" src="22_52 cenar.png">
+    </div>
+
+    <div id="23_05" class="page">
+        <img class="fullscreen-bg" src="23_05 recetas.png">
+    </div>
+
+    <div id="23_30" class="page">
+        <img class="fullscreen-bg" src="23_30 macanear y.o lavarme el pelo.png">
+    </div>
+
+    <div id="23_50" class="page"> 
+        <img class="fullscreen-bg" src="23_50 me time.png">
+    </div>
+
+    <div id="24_00" class="page">
+        <img class="fullscreen-bg" src="24_00 akétama katu.png">
+    </div>
+
+</body>
+</html>
